@@ -12,14 +12,16 @@ function App() {
   const [arrayOfNames, setArrayOfNames] = useState(names);
 
   return (
-    <div className="">
+    <div className="">Search:
       <input
         type="text"
         onChange={(e) => {
-          setArrayOfNames(filterNames( e.target.value));
+          setArrayOfNames(filterNames(e.target.value));
         }}
       ></input>
-      <RenderNames names={arrayOfNames} />
+      <div className="flex">
+        <RenderNames names={arrayOfNames} />
+      </div>
     </div>
   );
 }
